@@ -1,46 +1,55 @@
 
-var rectR = 33;
-var rectB = 33;
-var rectG = 33;
-var rectX = -1;
+let rectR = 33;
+let rectB = 33;
+let rectG = 33;
+let rectX = -1;
 
-var textFill = 33;
-var font = "Bungee";
 
-var sec = 0;
+let textFill = 33;
+let font = "Bungee";
 
-var bcr = 173;
-var bcg = 216;
-var bcb = 230;
 
-var home = false;
+let sec = 0;
 
-var cbR = 174;
-var cbG = 217;
-var cbB = 231;
 
-var pF = 255;
-var pF2 = 255;
-var pF3 = 255;
+let bcr = 173;
+let bcg = 216;
+let bcb = 230;
 
-var pS = false;
-var hS = false;
-var sM = false;
 
-var bO = 0;
-var bO2 = 0;
-var bO3 = 0;
-var bO4 = 0;
-var bO5 = 0;
-var bO6 = 0;
+let cbR = 173;
+let cbG = 214;
+let cbB = 230;
 
-var bF = 255;
-var pY = 3;
-var hY = 3;
-var sY = 3;
+
+let home = false;
+let pF = 255;
+let pF2 = 255;
+
+let pS = false;
+let hS = false;
+
+
+let bO = 0;
+let bO2 = 0;
+let bO3 = 0;
+let bO4 = 0;
+let bO5 = 0;
+
+
+let hY = 3;
+let bF = 255;
+
+
+let sw = 5;
+var insertedText = '';
+var username = '';
+var namePut = false;
+var typingMode = 0;
 
 
 function draw() {
+  
   
   createCanvas(windowWidth, windowHeight);
   background(rectR, rectG, rectB);
@@ -53,6 +62,7 @@ function draw() {
   textFont("Permanent Marker", windowHeight/15);
   text("presents", windowWidth/2, windowHeight/1.8);
   textFill += 1;  
+  
   
   if (textFill > 255) {
   
@@ -82,14 +92,13 @@ function draw() {
     
     home = true;
 
-if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*6 && mouseY < windowHeight/15*6+windowHeight/14) { pF = 230; } 
+if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*7 && mouseY < windowHeight/15*7+windowHeight/14) { pF = 230; } 
     else { pF = 255; }
-if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*8 && mouseY < windowHeight/15*8+windowHeight/14) { pF2 = 230; } 
+if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*10 && mouseY < windowHeight/15*10+windowHeight/14) { pF2 = 230; } 
     else { pF2 = 255; }
-if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*10 && mouseY < windowHeight/15*10+windowHeight/14) { pF3 = 230; } 
-    else { pF3 = 255; }
     
 }
+  
   
   if (home === true) {
     
@@ -100,84 +109,91 @@ if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY >
     cbG += 3;
     cbG += 3;
     fill(pF);
-    rect(windowWidth/8, windowHeight/15 * 6, windowWidth/8 * 6, windowHeight/14, 10);
+    rect(windowWidth/8, windowHeight/15 * 7, windowWidth/8 * 6, windowHeight/14, 10);
     fill(pF2);
-    rect(windowWidth/8, windowHeight/15 * 8, windowWidth/8 * 6, windowHeight/14, 10);
-    fill(pF3);
     rect(windowWidth/8, windowHeight/15 * 10, windowWidth/8 * 6, windowHeight/14, 10);
     fill(bcr, bcg, bcb);
     textSize(windowHeight/14);
-    text('PLAY', windowWidth/2, windowHeight/15 * 6.85);
-    text('HOW', windowWidth/2, windowHeight/15 * 8.85);
-    text('SETTINGS', windowWidth/2, windowHeight/15 * 10.85);
+    text('PLAY', windowWidth/2, windowHeight/15 * 7.85);
+    text('HOW', windowWidth/2, windowHeight/15 * 10.85);
     
-if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*6 && mouseY < windowHeight/15*6+windowHeight/14 && mouseIsPressed)   { pS = true; } 
-if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*8 && mouseY < windowHeight/15*8+windowHeight/14 && mouseIsPressed)   { hS = true; } 
-if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*10 && mouseY < windowHeight/15*10+windowHeight/14 && mouseIsPressed) { sM = true; } 
+if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*7 && mouseY < windowHeight/15*7+windowHeight/14 && mouseIsPressed)   { pS = true; } 
+if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*10 && mouseY < windowHeight/15*10+windowHeight/14 && mouseIsPressed)   { hS = true; } 
     
 }
+  
   
   if (pS === true) {
     
     home = false;
     hS = false;
-    sM = false;
     
     bO = 255;
     
-  }
-  if (bO === 255) {
-    
-    pY += 0.1;
-    bO2 += 10;
-
-    if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12) { bF = 244; } else { bF = 255; }
-    if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12 && mouseIsPressed) {
-      
-      bO = 0;
-      bO2 = 0;
-      pS = false;
-      home = true;
-      pY = 3;
-      
-    }
+if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHeight/7*3 && mouseY < windowHeight/7*4 && mouseIsPressed) { typingMode = 1; }
     
   }
-  if (pY >= 6) {
-    pY -= 0.1;
-  }
-  fill(bcr, bcg, bcb, bO);
-  rect(0, 0, windowWidth, windowHeight);
-  fill(255, 255, 255, bO);
-  textFont(font, windowHeight/10);
-  text("No Name Game", windowWidth/2, windowHeight/pY);
+  if (bO === 255) { bO2 += 10; }
+  if (bO2 > 255) { bO3 += 1; }
   fill(255, 255, 255, bO2);
-  rect(windowWidth/12, windowHeight/12*3, windowWidth/12*10, windowHeight/12*8, 25);
-  fill(bF, bF, bF, bO2);
-  rect(windowWidth/30, windowHeight/40, windowWidth/12, windowHeight/15, 25);
-  fill(bcr, bcg, bcb, bO);
-  textSize(windowWidth/35);
-  text("back", windowWidth/13.5, windowHeight/13);
+  rect(0, 0, windowWidth, windowHeight);
+  fill(173, 216, 230, bO3);
+  rect(0, 0, windowWidth, windowHeight);
+  fill(144, 238, 144, bO3);
+  rect(0, windowHeight/8*7.5, windowWidth, windowHeight/8, 25);
+  strokeWeight(10);
+  stroke(33, 33, 33, bO3);
+  fill(255, 255, 255, bO3);
+  text('NAME', windowWidth/2, windowHeight/2.5);
+  rect(windowWidth/10*2, windowHeight/7*3, windowWidth/10*6, windowHeight/7, 25);
+  noStroke();
+  fill(33);
+  textSize(windowWidth/15);
+  text(insertedText, windowWidth/2, windowHeight/1.9);
+  fill(173, 216, 230, bO2);
+  rect(0,windowHeight/7*3,windowWidth/16*3.15,windowHeight/7);
+  
+  if (typingMode > 1) { typingMode = 0; }
+  if (namePut === true) {
+    
+    strokeWeight(10);
+    stroke(33, 33, 33, bO3);
+    fill(255, 255, 255, bO3);
+    rect(windowWidth/10*2, windowHeight/7*3, windowWidth/10*6, windowHeight/7*2, 25);
+    noStroke();
+    fill(173, 216, 230, bO2);
+    rect(0,0,windowWidth,windowHeight/2.4);
+    strokeWeight(10);
+    stroke(33, 33, 33, bO3);
+    fill(255, 255, 255, bO3);
+    text('CHARACTER', windowWidth/2, windowHeight/2.5);
+    textSize(windowWidth/30);
+    text('p.s you can change this later', windowWidth/2, windowHeight/12 * 9);
+    noStroke();
+    fill(173, 216, 230, bO2);
+    rect(windowWidth/10*8.1,windowHeight/7*3,windowWidth/16*3.15,windowHeight/7);
+    
+  }
+  
   
   if (hS === true) {
     
     home = false;
     pS = false;
-    sM = false;
     
-    bO3 = 255;
+    bO4 = 255;
     
   }
-  if (bO3 === 255) {
+  if (bO4 === 255) {
     
     hY += 0.1;
-    bO4 += 10;
+    bO5 += 10;
 
-    if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12) { bF2 = 244; } else { bF2 = 255; }
+    if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12) { bF = 244; } else { bF = 255; }
     if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12 && mouseIsPressed) {
       
-      bO3 = 0;
       bO4 = 0;
+      bO5 = 0;
       hS = false;
       home = true;
       hY = 3;
@@ -185,62 +201,36 @@ if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY >
     }
     
   }
-  if (hY >= 6) {
-    hY -= 0.1;
-  }
-  fill(bcr, bcg, bcb, bO3);
+  if (hY >= 6) { hY -= 0.1; }
+  fill(bcr, bcg, bcb, bO4);
   rect(0, 0, windowWidth, windowHeight);
-  fill(255, 255, 255, bO3);
+  fill(255, 255, 255, bO4);
   textFont(font, windowHeight/10);
   text("HOW", windowWidth/2, windowHeight/hY);
-  fill(255, 255, 255, bO4);
+  fill(255, 255, 255, bO5);
   rect(windowWidth/12, windowHeight/12*3, windowWidth/12*10, windowHeight/12*8, 25);
-  fill(bF, bF, bF, bO4);
+  fill(bF, bF, bF, bO5);
   rect(windowWidth/30, windowHeight/40, windowWidth/12, windowHeight/15, 25);
-  fill(bcr, bcg, bcb, bO3);
+  fill(bcr, bcg, bcb, bO4);
   textSize(windowWidth/35);
   text("back", windowWidth/13.5, windowHeight/13);
   
-  if (sM === true) {
-    
-    home = false;
-    pS = false;
-    hS = false;
-    
-    bO5 = 255;
-    
-  }
-  if (bO5 === 255) {
-    
-    sY += 0.1;
-    bO6 += 10;
-
-    if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12) { bF2 = 244; } else { bF2 = 255; }
-    if (mouseX > windowWidth/30 && mouseX < windowWidth/30+windowWidth/12 && mouseY > windowHeight/40 && mouseY < windowHeight/40+windowHeight/12 && mouseIsPressed) {
-      
-      bO5 = 0;
-      bO6 = 0;
-      sM = false;
-      home = true;
-      sY = 3;
-      
-    }
-    
-  }
-  if (sY >= 6) {
-    sY -= 0.1;
-  }
-  fill(bcr, bcg, bcb, bO5);
-  rect(0, 0, windowWidth, windowHeight);
-  fill(255, 255, 255, bO5);
-  textFont(font, windowHeight/10);
-  text("SETTINGS", windowWidth/2, windowHeight/sY);
-  fill(255, 255, 255, bO6);
-  rect(windowWidth/12, windowHeight/12*3, windowWidth/12*10, windowHeight/12*8, 25);
-  fill(bF, bF, bF, bO6);
-  rect(windowWidth/30, windowHeight/40, windowWidth/12, windowHeight/15, 25);
-  fill(bcr, bcg, bcb, bO5);
-  textSize(windowWidth/35);
-  text("back", windowWidth/13.5, windowHeight/13);
   
 }
+
+function keyPressed() {
+        
+        if (typingMode === 1) {
+
+            if (keyCode === ENTER) { 
+              insertedText = username;
+              namePut = true;
+              typingMode = 0;
+            }
+            else { insertedText = insertedText + key.toString(); }
+          
+            if (keyCode === DELETE || keyCode === BACKSPACE) { insertedText = ' '; }
+          
+        } // ← Typing Input
+  
+};

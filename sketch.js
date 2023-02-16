@@ -1,26 +1,22 @@
+// First Line
 
 let rectR = 33;
 let rectB = 33;
 let rectG = 33;
 let rectX = -1;
 
-
 let textFill = 33;
 let font = "Bungee";
 
-
 let sec = 0;
-
 
 let bcr = 173;
 let bcg = 216;
 let bcb = 230;
 
-
 let cbR = 173;
 let cbG = 214;
 let cbB = 230;
-
 
 let home = false;
 let pF = 255;
@@ -29,27 +25,46 @@ let pF2 = 255;
 let pS = false;
 let hS = false;
 
-
 let bO = 0;
 let bO2 = 0;
 let bO3 = 0;
 let bO4 = 0;
 let bO5 = 0;
 
-
 let hY = 3;
 let bF = 255;
 
-
 let sw = 5;
-var insertedText = '';
-var username = '';
-var namePut = false;
-var typingMode = 0;
+let insertedText = '';
+let username = '';
+let namePut = false;
+let typingMode = 0;
 
+let rs = 0;
+let os = 0;
+let ys = 0;
+let gs = 0;
+let bs = 0;
+let ps = 0;
+let bls = 0;
+let ws = 2.5;
+
+let mf = 33;
+let mo = false;
+let mo2 = 0;
+let mo3 = 0;
+let menuIcon = function() {
+  
+  strokeWeight(7.5);
+  stroke(mf, mf, mf, mo3);
+  line(windowWidth/50, windowHeight/50, windowWidth/20, windowHeight/50);
+  line(windowWidth/50, windowHeight/50 + 10, windowWidth/20, windowHeight/50 + 10);
+  line(windowWidth/50, windowHeight/50 + 20, windowWidth/20, windowHeight/50 + 20);
+  noStroke();
+  
+}
 
 function draw() {
-  
   
   createCanvas(windowWidth, windowHeight);
   background(rectR, rectG, rectB);
@@ -122,7 +137,6 @@ if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY >
     
 }
   
-  
   if (pS === true) {
     
     home = false;
@@ -134,7 +148,7 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
     
   }
   if (bO === 255) { bO2 += 10; }
-  if (bO2 > 255) { bO3 += 1; }
+  if (bO2 > 255) { bO3 += 1; mo3 += 1; }
   fill(255, 255, 255, bO2);
   rect(0, 0, windowWidth, windowHeight);
   fill(173, 216, 230, bO3);
@@ -152,6 +166,7 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
   text(insertedText, windowWidth/2, windowHeight/1.9);
   fill(173, 216, 230, bO2);
   rect(0,windowHeight/7*3,windowWidth/16*3.15,windowHeight/7);
+  menuIcon();
   
   if (typingMode > 1) { typingMode = 0; }
   if (namePut === true) {
@@ -169,12 +184,88 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
     text('CHARACTER', windowWidth/2, windowHeight/2.5);
     textSize(windowWidth/30);
     text('p.s you can change this later', windowWidth/2, windowHeight/12 * 9);
-    noStroke();
+    noStroke();    
     fill(173, 216, 230, bO2);
     rect(windowWidth/10*8.1,windowHeight/7*3,windowWidth/16*3.15,windowHeight/7);
     
+    fill(255, 101, 87, bO2);
+    stroke(33, 33, 33, rs);
+    ellipse(windowWidth/10*3.05, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    
+    fill(255, 137, 87, bO2);
+    stroke(33, 33, 33, os);
+    ellipse(windowWidth/10*4.3, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    
+    fill(255, 216, 87, bO2);
+    stroke(33, 33, 33, ys);
+    ellipse(windowWidth/10*5.55, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    
+    fill(182, 255, 87, bO2);
+    stroke(33, 33, 33, gs);
+    ellipse(windowWidth/10*6.8, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    
+    fill(87, 171, 255, bO2);
+    stroke(33, 33, 33, bs);
+    ellipse(windowWidth/10*3.05, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    
+    fill(192, 133, 255, bO2);
+    stroke(33, 33, 33, ps);
+    ellipse(windowWidth/10*4.3, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    
+    fill(33, 33, 33, bO2);
+    stroke(33, 33, 33, bls);
+    ellipse(windowWidth/10*5.55, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    
+    strokeWeight(ws);
+    stroke(33, 33, 33, bO2);
+    fill(255, 255, 255, bO2);
+    ellipse(windowWidth/10*6.8, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    noStroke();
+    
+    menuIcon();
+    
   }
   
+if (namePut === true && mouseX > windowWidth/10*2.55 && mouseX < windowWidth/10*3.55 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { rs = 255; }
+  else { rs = 0; }
+if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { os = 255; }
+  else { os = 0; }
+if (namePut === true && mouseX > windowWidth/10*5.05 && mouseX < windowWidth/10*6.05 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { ys = 255; }
+  else { ys = 0; }
+if (namePut === true && mouseX > windowWidth/10*6.3 && mouseX < windowWidth/10*7.3 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { gs = 255; }
+  else { gs = 0; }  
+if (namePut === true && mouseX > windowWidth/10*2.55 && mouseX < windowWidth/10*3.55 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { bs = 255; }
+  else { bs = 0; }
+if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { ps = 255; }
+  else { ps = 0; }
+if (namePut === true && mouseX > windowWidth/10*5.05 && mouseX < windowWidth/10*6.05 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { bls = 255; }
+  else { bls = 0; }
+if (namePut === true && mouseX > windowWidth/10*6.3 && mouseX < windowWidth/10*7.3 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { ws = 10; }
+  else { ws = 2.5; }
+  
+if (pS === true && mouseX > windowWidth/50 && mouseX < windowWidth/20 && mouseY > windowHeight/50 && mouseY < windowHeight/50 + 10) { mf = 0; }
+  else { mf = 33; }
+  
+if (pS === true && mouseX > windowWidth/50 && mouseX < windowWidth/20 && mouseY > windowHeight/50 && mouseY < windowHeight/50 + 10 && mouseIsPressed) { mo = true; }
+
+  if (mo === true) {
+    
+    mo2 += 1;
+    mo3 = 0;
+    if (mo2 > 225) { mo2 -= 1; }
+    
+    fill(33, 33, 33, mo2);
+    rect(5, 5, windowWidth/4, windowHeight - 10, 25);
+    fill(255, 255, 255, mo2);
+    textSize(windowWidth/30);
+    text('Hey, ' + username, windowWidth/8, windowHeight/12.5);
+    fill(255, 73, 73, mo2);
+    textSize(windowWidth/35)
+    text('EXIT', windowWidth/32 * 7 - 10, windowHeight/25);
+    fill(173, 216, 230, bO2);
+    rect(windowWidth/4 + 5, 0, windowWidth/4*3, windowHeight/8);
+  
+  }
   
   if (hS === true) {
     
@@ -214,7 +305,10 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
   fill(bcr, bcg, bcb, bO4);
   textSize(windowWidth/35);
   text("back", windowWidth/13.5, windowHeight/13);
+  textSize(windowWidth/17.5)
+text('This is a platformer where you, yes you, are playing as a stickman/woman or stickthey. Not trying to asume gender', windowWidth/12, windowHeight/3, windowWidth/1.2);
   
+  username = insertedText;
   
 }
 
@@ -223,7 +317,6 @@ function keyPressed() {
         if (typingMode === 1) {
 
             if (keyCode === ENTER) { 
-              insertedText = username;
               namePut = true;
               typingMode = 0;
             }
@@ -233,4 +326,6 @@ function keyPressed() {
           
         } // ← Typing Input
   
-};
+}
+
+// Last Line

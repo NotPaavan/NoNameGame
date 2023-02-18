@@ -68,6 +68,8 @@ let alexa = function() {
   if (username === 'adriana') { username = 'stubiddumbfrikgothohedoubblehockeystick'; }
   
 }
+let qf = 255;
+let cf = 255;
 
 function draw() {
   
@@ -251,8 +253,9 @@ if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY 
   
 if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY > windowHeight/60 && mouseY < windowHeight/60 + 25 && mouseIsPressed) { mo = true; }
   
-if (mo === true && mouseX > windowWidth/32*6.5 && mouseX < windowWidth/32*7.5 && mouseIsPressed) { mo = false; }
-
+if (mo === true && mouseX > windowWidth/32*6.5 && mouseX < windowWidth/32*7.5 && mouseY < windowHeight/25 + windowWidth/70 && mouseIsPressed) { mo = false; }
+if (mo === true && mouseX > windowWidth/32 + 5 && mouseX < windowWidth/32*7 + 5 && mouseY > windowHeight/8 + 5 && mouseY < windowHeight/4 + 5) { qf = 200; } else { qf = 255; }
+  
   if (mo === true) {
     
     mo2 += 1;
@@ -269,6 +272,18 @@ if (mo === true && mouseX > windowWidth/32*6.5 && mouseX < windowWidth/32*7.5 &&
     text('❌', windowWidth/32 * 7, windowHeight/25);
     fill(173, 216, 230, bO2);
     rect(windowWidth/4 + 5, 0, windowWidth/4*3, windowHeight/8);
+    
+    fill(qf, qf, qf, mo2);
+    rect(windowWidth/32 + 5, windowHeight/8 + 5, windowWidth/16*3, windowHeight/8, 25);
+    fill(33, 33, 33, mo2);
+    textSize(windowWidth/27);
+    text('Save & Quit 🏃‍♂️', windowWidth/32, windowHeight/7 + 5, windowWidth/16*3);
+    
+    fill(cf, cf, cf, mo2);
+    rect(windowWidth/32 + 5, windowHeight/8 * 3 + 5, windowWidth/16*3, windowHeight/8, 25);
+    fill(33, 33, 33, mo2);
+    textSize(windowWidth/35);
+    text('Character', windowWidth/28, windowHeight/64 * 27 + 5, windowWidth/16*3);
   
   }
   

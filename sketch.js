@@ -63,6 +63,11 @@ let menuIcon = function() {
   noStroke();
   
 }
+let alexa = function() {
+  if (username === 'alexa') { username = 'dumfrik'; }
+  if (username === 'adriana') { username = 'stubiddumbfrikgothohedoubblehockeystick'; }
+  
+}
 
 function draw() {
   
@@ -77,7 +82,6 @@ function draw() {
   textFont("Permanent Marker", windowHeight/15);
   text("presents", windowWidth/2, windowHeight/1.8);
   textFill += 1;  
-  
   
   if (textFill > 255) {
   
@@ -112,8 +116,7 @@ if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY >
 if (mouseX > windowWidth/8 && mouseX < windowWidth/8+windowWidth/8*6 && mouseY > windowHeight/15*10 && mouseY < windowHeight/15*10+windowHeight/14) { pF2 = 230; } 
     else { pF2 = 255; }
     
-}
-  
+}  
   
   if (home === true) {
     
@@ -243,10 +246,12 @@ if (namePut === true && mouseX > windowWidth/10*5.05 && mouseX < windowWidth/10*
 if (namePut === true && mouseX > windowWidth/10*6.3 && mouseX < windowWidth/10*7.3 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { ws = 10; }
   else { ws = 2.5; }
   
-if (pS === true && mouseX > windowWidth/50 && mouseX < windowWidth/20 && mouseY > windowHeight/50 && mouseY < windowHeight/50 + 10) { mf = 0; }
+if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY > windowHeight/60 && mouseY < windowHeight/60 + 25) { mf = 0; }
   else { mf = 33; }
   
-if (pS === true && mouseX > windowWidth/50 && mouseX < windowWidth/20 && mouseY > windowHeight/50 && mouseY < windowHeight/50 + 10 && mouseIsPressed) { mo = true; }
+if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY > windowHeight/60 && mouseY < windowHeight/60 + 25 && mouseIsPressed) { mo = true; }
+  
+if (mo === true && mouseX > windowWidth/32*6.5 && mouseX < windowWidth/32*7.5 && mouseIsPressed) { mo = false; }
 
   if (mo === true) {
     
@@ -261,7 +266,7 @@ if (pS === true && mouseX > windowWidth/50 && mouseX < windowWidth/20 && mouseY 
     text('Hey, ' + username, windowWidth/8, windowHeight/12.5);
     fill(255, 73, 73, mo2);
     textSize(windowWidth/35)
-    text('EXIT', windowWidth/32 * 7 - 10, windowHeight/25);
+    text('❌', windowWidth/32 * 7, windowHeight/25);
     fill(173, 216, 230, bO2);
     rect(windowWidth/4 + 5, 0, windowWidth/4*3, windowHeight/8);
   
@@ -309,6 +314,7 @@ if (pS === true && mouseX > windowWidth/50 && mouseX < windowWidth/20 && mouseY 
 text('This is a platformer where you, yes you, are playing as a stickman/woman or stickthey. Not trying to asume gender', windowWidth/12, windowHeight/3, windowWidth/1.2);
   
   username = insertedText;
+  alexa();
   
 }
 

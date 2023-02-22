@@ -195,57 +195,57 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
     
     fill(255, 101, 87, bO2);
     stroke(33, 33, 33, rs);
-    ellipse(windowWidth/10*3.05, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*2.4, windowHeight/7*3.2, windowWidth/10, windowHeight/10, 25);
     
     fill(255, 137, 87, bO2);
     stroke(33, 33, 33, os);
-    ellipse(windowWidth/10*4.3, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*3.8, windowHeight/7*3.2, windowWidth/10, windowHeight/10, 25);
     
     fill(255, 216, 87, bO2);
     stroke(33, 33, 33, ys);
-    ellipse(windowWidth/10*5.55, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*5.2, windowHeight/7*3.2, windowWidth/10, windowHeight/10, 25);
     
     fill(182, 255, 87, bO2);
     stroke(33, 33, 33, gs);
-    ellipse(windowWidth/10*6.8, windowHeight/7*3.6, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*6.7, windowHeight/7*3.2, windowWidth/10, windowHeight/10, 25);
     
     fill(87, 171, 255, bO2);
     stroke(33, 33, 33, bs);
-    ellipse(windowWidth/10*3.05, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*2.4, windowHeight/7*4, windowWidth/10, windowHeight/10, 25);
     
     fill(192, 133, 255, bO2);
     stroke(33, 33, 33, ps);
-    ellipse(windowWidth/10*4.3, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*3.8, windowHeight/7*4, windowWidth/10, windowHeight/10, 25);
     
     fill(33, 33, 33, bO2);
     stroke(33, 33, 33, bls);
-    ellipse(windowWidth/10*5.55, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*5.2, windowHeight/7*4, windowWidth/10, windowHeight/10, 25);
     
     strokeWeight(ws);
     stroke(33, 33, 33, bO2);
     fill(255, 255, 255, bO2);
-    ellipse(windowWidth/10*6.8, windowHeight/7*4.4, windowWidth/10, windowWidth/10);
+    rect(windowWidth/10*6.7, windowHeight/7*4, windowWidth/10, windowHeight/10, 25);
     noStroke();
     
     menuIcon();
     
   }
   
-if (namePut === true && mouseX > windowWidth/10*2.55 && mouseX < windowWidth/10*3.55 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { rs = 255; }
+if (namePut === true && mouseX > windowWidth/10*2.4 && mouseX < windowWidth/10*3.4 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { rs = 255; }
   else { rs = 0; }
-if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { os = 255; }
+if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { os = 255; }
   else { os = 0; }
-if (namePut === true && mouseX > windowWidth/10*5.05 && mouseX < windowWidth/10*6.05 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { ys = 255; }
+if (namePut === true && mouseX > windowWidth/10*5.2 && mouseX < windowWidth/10*6.2 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { ys = 255; }
   else { ys = 0; }
-if (namePut === true && mouseX > windowWidth/10*6.3 && mouseX < windowWidth/10*7.3 && mouseY > windowHeight/7*3.6-windowHeight/10*0.5 && mouseY < windowHeight/7*3.6+windowWidth/10*0.5) { gs = 255; }
+if (namePut === true && mouseX > windowWidth/10*6.7 && mouseX < windowWidth/10*7.7 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { gs = 255; }
   else { gs = 0; }  
-if (namePut === true && mouseX > windowWidth/10*2.55 && mouseX < windowWidth/10*3.55 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { bs = 255; }
+if (namePut === true && mouseX > windowWidth/10*2.4 && mouseX < windowWidth/10*3.4 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { bs = 255; }
   else { bs = 0; }
-if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { ps = 255; }
+if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { ps = 255; }
   else { ps = 0; }
-if (namePut === true && mouseX > windowWidth/10*5.05 && mouseX < windowWidth/10*6.05 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { bls = 255; }
+if (namePut === true && mouseX > windowWidth/10*5.2 && mouseX < windowWidth/10*6.2 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { bls = 255; }
   else { bls = 0; }
-if (namePut === true && mouseX > windowWidth/10*6.3 && mouseX < windowWidth/10*7.3 && mouseY > windowHeight/7*4.4-windowHeight/10*0.5 && mouseY < windowHeight/7*4.4+windowWidth/10*0.5) { ws = 10; }
+if (namePut === true && mouseX > windowWidth/10*6.7 && mouseX < windowWidth/10*7.7 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { ws = 10; }
   else { ws = 2.5; }
   
 if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY > windowHeight/60 && mouseY < windowHeight/60 + 25) { mf = 0; }

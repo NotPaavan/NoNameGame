@@ -1,4 +1,5 @@
 // First Line
+//https://notpaavan.github.io/NoNameGame/
 
 let rectR = 33;
 let rectB = 33;
@@ -61,11 +62,6 @@ let menuIcon = function() {
   line(windowWidth/50, windowHeight/50 + 10, windowWidth/20, windowHeight/50 + 10);
   line(windowWidth/50, windowHeight/50 + 20, windowWidth/20, windowHeight/50 + 20);
   noStroke();
-  
-}
-let alexa = function() {
-  if (username === 'alexa') { username = 'dumfrik'; }
-  if (username === 'adriana') { username = 'stubiddumbfrikgothohedoubblehockeystick'; }
   
 }
 let qf = 255;
@@ -166,7 +162,7 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
   text('NAME', windowWidth/2, windowHeight/2.5);
   rect(windowWidth/10*2, windowHeight/7*3, windowWidth/10*6, windowHeight/7, 25);
   noStroke();
-  fill(33);
+  fill(33, 33, 33, bO3);
   textSize(windowWidth/15);
   text(insertedText, windowWidth/2, windowHeight/1.9);
   fill(173, 216, 230, bO2);
@@ -255,7 +251,26 @@ if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY 
   
 if (mo === true && mouseX > windowWidth/32*6.5 && mouseX < windowWidth/32*7.5 && mouseY < windowHeight/25 + windowWidth/70 && mouseIsPressed) { mo = false; }
 if (mo === true && mouseX > windowWidth/32 + 5 && mouseX < windowWidth/32*7 + 5 && mouseY > windowHeight/8 + 5 && mouseY < windowHeight/4 + 5) { qf = 200; } else { qf = 255; }
+if (mo === true && mouseX > windowWidth/32 + 5 && mouseX < windowWidth/32*7 + 5 && mouseY > windowHeight/8 + 5 && mouseY < windowHeight/4 + 5 && mouseIsPressed) {
   
+  pS = false;
+  hS = false;
+  mo = false;
+  home = true;
+  bO = 0;
+  bO2 = 0;
+  bO3 = 0;  
+  rs = 0;
+  os = 0;
+  ys = 0;
+  gs = 0;
+  bs = 0;
+  ps = 0;
+  bls = 0;
+  ws = 2.5;
+  
+}
+
   if (mo === true) {
     
     mo2 += 1;
@@ -329,7 +344,6 @@ if (mo === true && mouseX > windowWidth/32 + 5 && mouseX < windowWidth/32*7 + 5 
 text('This is a platformer where you, yes you, are playing as a stickman/woman or stickthey. Not trying to asume gender', windowWidth/12, windowHeight/3, windowWidth/1.2);
   
   username = insertedText;
-  alexa();
   
 }
 

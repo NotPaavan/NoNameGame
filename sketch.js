@@ -1,5 +1,20 @@
 // First Line
-//https://notpaavan.github.io/NoNameGame/
+
+/****************************************************
+
+  * https://notpaavan.github.io/NoNameGame/
+
+  * character color selector acurate and working
+  
+  * good loking exit button
+  
+  * aesthetic stickman
+  
+  * more customization
+  
+  * unlock stuff with progression
+  
+****************************************************/
 
 let rectR = 33;
 let rectB = 33;
@@ -292,7 +307,7 @@ if (mo === true && mouseX > windowWidth/32 + 5 && mouseX < windowWidth/32*7 + 5 
     rect(windowWidth/32 + 5, windowHeight/8 + 5, windowWidth/16*3, windowHeight/4, 25);
     fill(33, 33, 33, mo2);
     textSize(windowWidth/27);
-    text('Save & Quit 🏃‍♂️', windowWidth/32, windowHeight/14*3 + 5, windowWidth/16*3);
+    text('Save & Quit 🏃‍♂️', windowWidth/32, windowHeight/58*11 + 5, windowWidth/16*3);
     
     fill(cf, cf, cf, mo2);
     rect(windowWidth/32 + 5, windowHeight/2 + 5 - windowHeight/20, windowWidth/16*3, windowHeight/8, 25);

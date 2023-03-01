@@ -4,9 +4,7 @@
 
   * https://notpaavan.github.io/NoNameGame/
 
-  * character color selector acurate and working
-  
-  * good loking exit button
+  * character color selector working
   
   * aesthetic stickman
   
@@ -242,21 +240,21 @@ if (mouseX > windowWidth/10*2 && mouseX < windowWidth/10*8 && mouseY > windowHei
     
   }
   
-if (namePut === true && mouseX > windowWidth/10*2.4 && mouseX < windowWidth/10*3.4 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { rs = 255; }
+if (namePut === true && mouseX > windowWidth/10*2.4 && mouseX < windowWidth/10*3.2 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { rs = 255; }
   else { rs = 0; }
-if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { os = 255; }
+if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.6 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { os = 255; }
   else { os = 0; }
-if (namePut === true && mouseX > windowWidth/10*5.2 && mouseX < windowWidth/10*6.2 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { ys = 255; }
+if (namePut === true && mouseX > windowWidth/10*5.2 && mouseX < windowWidth/10*6 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { ys = 255; }
   else { ys = 0; }
-if (namePut === true && mouseX > windowWidth/10*6.7 && mouseX < windowWidth/10*7.7 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { gs = 255; }
+if (namePut === true && mouseX > windowWidth/10*6.7 && mouseX < windowWidth/10*7.5 && mouseY > windowHeight/7*3.2 && mouseY < windowHeight/7*3.2+windowWidth/10) { gs = 255; }
   else { gs = 0; }  
-if (namePut === true && mouseX > windowWidth/10*2.4 && mouseX < windowWidth/10*3.4 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { bs = 255; }
+if (namePut === true && mouseX > windowWidth/10*2.4 && mouseX < windowWidth/10*3.2 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { bs = 255; }
   else { bs = 0; }
-if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.8 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { ps = 255; }
+if (namePut === true && mouseX > windowWidth/10*3.8 && mouseX < windowWidth/10*4.6 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { ps = 255; }
   else { ps = 0; }
-if (namePut === true && mouseX > windowWidth/10*5.2 && mouseX < windowWidth/10*6.2 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { bls = 255; }
+if (namePut === true && mouseX > windowWidth/10*5.2 && mouseX < windowWidth/10*6 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { bls = 255; }
   else { bls = 0; }
-if (namePut === true && mouseX > windowWidth/10*6.7 && mouseX < windowWidth/10*7.7 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { ws = 10; }
+if (namePut === true && mouseX > windowWidth/10*6.7 && mouseX < windowWidth/10*7.5 && mouseY > windowHeight/7*4 && mouseY < windowHeight/7*4+windowWidth/10) { ws = 10; }
   else { ws = 2.5; }
   
 if (pS === true && mouseX > windowWidth/60 && mouseX < windowWidth/20 && mouseY > windowHeight/60 && mouseY < windowHeight/60 + 25) { mf = 0; }
